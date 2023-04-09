@@ -16,7 +16,7 @@ const { values: options } = parseArgs({
 // Generate a private key if one doesn't exist
 const kid = options.kid || "default";
 const sub = options.sub || "me";
-const privateKeyPath = `.data/private-keys/${kid}.key.json`;
+const privateKeyPath = `.data/keys/${kid}.key.json`;
 const key = await jose.importJWK(
   JSON.parse(readFileSync(privateKeyPath, "utf8")),
   "RS256"

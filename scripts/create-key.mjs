@@ -10,12 +10,12 @@ const { values: options } = parseArgs({
   },
 });
 
-mkdirSync(".data/private-keys", { recursive: true });
+mkdirSync(".data/keys", { recursive: true });
 
 // Generate a private key if one doesn't exist
 const kid = options.kid || "default";
-const privateKeyPath = `.data/private-keys/${kid}.key.json`;
-const publicKeyPath = `.data/private-keys/${kid}.pub.json`;
+const privateKeyPath = `.data/keys/${kid}.key.json`;
+const publicKeyPath = `.data/keys/${kid}.pub.json`;
 
 const publicKey = await (async () => {
   if (!existsSync(publicKeyPath)) {
