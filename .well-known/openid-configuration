@@ -1,0 +1,14 @@
+{
+  "id_token_signing_alg_values_supported": [
+    "RS256"
+  ],
+  "issuer": "https://dtinth.github.io/self-openid",
+  "jwks_uri": "https://dtinth.github.io/self-openid/.well-known/jwks.json",
+  "authorization_endpoint": "https://dtinth.github.io/self-openid",
+  "response_types_supported": [
+    "id_token"
+  ],
+  "subject_types_supported": [
+    "public"
+  ]
+}

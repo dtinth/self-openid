@@ -1,5 +1,8 @@
 {
 	"dependencies": {
 		"jose": "^4.13.1"
+	},
+	"devDependencies": {
+		"@types/node": "18.x"
 	}
 }
