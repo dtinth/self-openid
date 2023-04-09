@@ -27,7 +27,7 @@ const publicKey = await (async () => {
     writeFileSync(publicKeyPath, JSON.stringify(publicKey));
     return publicKey;
   }
-  console.log("Key file already exists — skipping.");
+  console.log(`Public key file "${publicKeyPath}" already exists — skipping.`);
   return JSON.parse(readFileSync(publicKeyPath, "utf8"));
 })();
 
