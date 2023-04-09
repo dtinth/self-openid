@@ -3,6 +3,10 @@
 import { writeFileSync } from "fs";
 import { parseArgs } from "util";
 
+console.log(
+  "NOTE: This setup script will clear any existing configuration, as well as keys."
+);
+
 const { values: options } = parseArgs({
   options: {
     issuer: { type: "string" },
@@ -30,3 +34,5 @@ writeFileSync(
     2
   )
 );
+
+writeFileSync(".well-known/jwks.json", JSON.stringify({ keys: [] }, null, 2));
